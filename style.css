@@ -1,67 +1,47 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@600&display=swap');
 
-* {
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: #f3f3f3; 
+}
+
+.portfolio {
+  display: flex;
+  min-width: 600px;
+  max-width: 900px;
+  height: 400px;
+  margin: 4rem auto;
+}
+.image {
+  width: 60px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  overflow: hidden;
+  position: relative;
+}
+/*.image.active {
+  flex-grow: 100;
+  max-width: 600px;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat Alternates ";
+  border-radius: 7px;
+  background-size: auto 100%;
 }
-body {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-body {
-  background: url("img/town-plane.jfif") no-repeat 0% 0%/cover;
-min-height: 100vh;
-}
-.content {
-  margin: 2rem 2rem 0 29rem;
-}
-h1 {
-  font-size: 6rem;
-  margin: 3rem 0;
-  text-shadow: 4px 4px 4px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
-}
-p {
-  padding: 2rem;
-  margin-bottom: 1rem;
-  background: rgba(255, 169, 9, 0.6);
-  border-bottom: 1px solid #333;
-  font-weight: bolder;
-  line-height: 1.3rem;
-}
+.image:not(.active) {
+  flex-grow: 1;
+  border-radius: 5px;
+}*/
 
-nav {
-  margin: 3rem 0 0 3rem;
-  position: fixed; 
+.image:hover {
+  flex-grow: 100;
+  max-width: 600px;
+  margin: 0;
+  border-radius: 7px;
+  background-size: auto 100%;
+  transition: 1s;
 }
-ul {
-/* width minimum sinon la perspective est différente   */
-  width: 1px; 
-  list-style: none;
-  perspective: 500px;
-}
-ul:hover li:not(:hover) {
-  opacity: 0.5;
-}
-
-li {
-  transform: rotateY(30deg) scaleX(1.3);
-  transform-origin: left;
-  transition: 0.5s;
-}
-li:hover {
-  transform: rotateY(3deg);
-}
-li a {
-  font-size: 6rem;
-  color: #000;
-  line-height: 1;
-  opacity: 0.6;
-}
-li a.active, 
-a:hover {
-  opacity: 1;
+.image:not(:hover) {
+  flex-grow: 1;
+  border-radius: 5px;
 }
