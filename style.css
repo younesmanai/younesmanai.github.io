@@ -1,47 +1,325 @@
-@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@600&display=swap');
+/*RESET*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/*END RESET*/
 
+/*GENERAL*/
 body {
-  height: 100vh;
-  overflow: hidden;
-  background: #f3f3f3; 
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.25;
+}
+img {
+	max-width: 100%;
+}
+	
+
+.main-header {
+	position: relative;
+	margin-bottom: 2rem;
+	
+}
+.d-angle {
+	position: absolute;
+	left: 2rem;
+	bottom: 27rem;
+}
+.d-angle p {
+	font-size: 13px;
+}
+.header-img {
+	
 }
 
-.portfolio {
-  display: flex;
-  min-width: 600px;
-  max-width: 900px;
-  height: 400px;
-  margin: 4rem auto;
+.button-menu {
+	display: inline-block;
+	position: absolute;
+	top: 2vh;
+	right: 2vh;	
 }
-.image {
-  width: 60px;
-  margin: 10px;
-  cursor: pointer;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-  overflow: hidden;
-  position: relative;
+.button-menu  .menu-word {
+	display: inline-block;
+	vertical-align: middle;
 }
-/*.image.active {
-  flex-grow: 100;
-  max-width: 600px;
-  margin: 0;
-  border-radius: 7px;
-  background-size: auto 100%;
+.ham {
+	display: inline-block;
+	background-image: url("img/burg.png");
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 14px;
+	vertical-align: middle;
 }
-.image:not(.active) {
-  flex-grow: 1;
-  border-radius: 5px;
+.main {
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	margin: 0 auto;
+}
+
+
+/*GRILLE*/
+.xl-col-1 {
+	width: calc(((100% / 12) * 1) - 2%);
+}
+.xl-col-2 {
+	width: calc(((100% / 12) * 2) - 2%);
+}
+.xl-col-3 {
+	width: calc(((100% / 12) * 3) - 2%);
+}
+.xl-col-4 {
+	width: calc(((100% / 12) * 4) - 2%);
+}
+.xl-col-5 {
+	width: calc(((100% / 12) * 5) - 2%);
+}
+.xl-col-6 {
+	width: calc(((100% / 12) * 6) - 2%);
+}
+.xl-col-7 {
+	width: calc(((100% / 12) * 7) - 2%);
+}
+.xl-col-8 {
+	width: calc(((100% / 12) * 8) - 2%);
+}
+.xl-col-9 {
+	width: calc(((100% / 12) * 9) - 2%);
+}
+.xl-col-10 {
+	width: calc(((100% / 12) * 10) - 2%);
+}
+.xl-col-11 {
+	width: calc(((100% / 12) * 11) - 2%);
+}
+.xl-col-12 {
+	width: calc(((100% / 12) * 12) - 2%);
+}
+
+
+
+
+
+
+/*
+@media screen and (min-width: 360px) {
+
+
+.sm-col-1 {
+	width: calc(((100% / 12) * 1) - 2%);
+}
+.sm-col-2 {
+	width: calc(((100% / 12) * 2) - 2%);
+}
+.sm-col-3 {
+	width: calc(((100% / 12) * 3) - 2%);
+}
+.sm-col-4 {
+	width: calc(((100% / 12) * 4) - 2%);
+}
+.sm-col-5 {
+	width: calc(((100% / 12) * 5) - 2%);
+}
+.sm-col-6 {
+	width: calc(((100% / 12) * 6) - 2%);
+}
+.sm-col-7 {
+	width: calc(((100% / 12) * 7) - 2%);
+}
+.sm-col-8 {
+	width: calc(((100% / 12) * 8) - 2%);
+}
+.sm-col-9 {
+	width: calc(((100% / 12) * 9) - 2%);
+}
+.sm-col-10 {
+	width: calc(((100% / 12) * 10) - 2%);
+}
+.sm-col-11 {
+	width: calc(((100% / 12) * 11) - 2%);
+}
+.sm-col-12 {
+	width: calc(((100% / 12) * 12) - 2%);
+	}
+
 }*/
 
-.image:hover {
-  flex-grow: 100;
-  max-width: 600px;
-  margin: 0;
-  border-radius: 7px;
-  background-size: auto 100%;
-  transition: 1s;
+/*@media screen and (min-width: 768px) {
+
+.main {
+	display: flex;
+	flex: row wrap;
 }
-.image:not(:hover) {
-  flex-grow: 1;
-  border-radius: 5px;
+
+.md-col-1 {
+	width: calc(((100% / 12) * 1) - 2%);
+}
+.md-col-2 {
+	width: calc(((100% / 12) * 2) - 2%);
+}
+.md-col-3 {
+	width: calc(((100% / 12) * 3) - 2%);
+}
+.md-col-4 {
+	width: calc(((100% / 12) * 4) - 2%);
+}
+.md-col-5 {
+	width: calc(((100% / 12) * 5) - 2%);
+}
+.md-col-6 {
+	width: calc(((100% / 12) * 6) - 2%);
+}
+.md-col-7 {
+	width: calc(((100% / 12) * 7) - 2%);
+}
+.md-col-8 {
+	width: calc(((100% / 12) * 8) - 2%);
+}
+.md-col-9 {
+	width: calc(((100% / 12) * 9) - 2%);
+}
+.md-col-10 {
+	width: calc(((100% / 12) * 10) - 2%);
+}
+.md-col-11 {
+	width: calc(((100% / 12) * 11) - 2%);
+}
+.md-col-12 {
+	width: calc(((100% / 12) * 12) - 2%);
+	}
+
+}*/
+
+/*@media screen and (min-width: 1000px) {
+
+.main {
+	display: flex;
+	flex: row wrap;
+}*/
+/*article {
+	
+	}
+.lg-col-1 {
+	width: calc(((100% / 12) * 1) - 2%);
+}
+.lg-col-2 {
+	width: calc(((100% / 12) * 2) - 2%);
+}
+.lg-col-3 {
+	width: calc(((100% / 12) * 3) - 2%);
+}
+.lg-col-4 {
+	width: calc(((100% / 12) * 4) - 2%);
+}
+.lg-col-5 {
+	width: calc(((100% / 12) * 5) - 2%);
+}
+.lg-col-6 {
+	width: calc(((100% / 12) * 6) - 2%);
+}
+.lg-col-7 {
+	width: calc(((100% / 12) * 7) - 2%);
+}
+.lg-col-8 {
+	width: calc(((100% / 12) * 8) - 2%);
+}
+.lg-col-9 {
+	width: calc(((100% / 12) * 9) - 2%);
+}
+.lg-col-10 {
+	width: calc(((100% / 12) * 10) - 2%);
+}
+.lg-col-11 {
+	width: calc(((100% / 12) * 11) - 2%);
+}
+.lg-col-12 {
+	width: calc(((100% / 12) * 12) - 2%);
+	}
+
+}
+*/
+
+
+
+
+
+
+
+/*GENERAL*/
+.has-gutter {
+	margin-left: 1%;
+	margin-right: 1%;
+}
+section {
+	margin-bottom: 55px;
+}
+
+/*FORMULAIRE*/
+.formulaire {
+	width: 100%;
+	border: 1px solid aqua;
+	background: url("img/formulaire.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+.form {
+	/*width: calc((900 / 1200) * 100%);*/
+	border: 1px solid rgba(179, 28, 28);
+	padding: 15px;
+	margin: 0 auto;
+	
+}
+.form h2 {
+	margin-bottom: 15px;
+	color: #fff;
+}
+label {
+	color: #fff;
+}
+label, input, textarea {
+	display: block;
+	width: 30vw;	
+}
+input, textarea {
+	padding: 4px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+.gauche, .droite {
+	display: flex;
+	justify-content: space-between;
+}
+#message {
+	height: 120px; 
+}
+
+/*BUTTON*/
+.envoyer, .reset {
+	margin-top: 15px;
+	text-align: center;
+}
+.button a {
+	display: block;
+	text-decoration: none;
+	padding: 5px 45px 5px 45px;
+	color: #fff;
+}
+.button {
+	text-align: center;
+	background-color: #B061FF;
+	border: 1px solid #B061FF;
+	border-radius: 35px 35px 35px 35px;
+	width: 12em;
 }
