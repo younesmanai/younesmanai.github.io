@@ -33,14 +33,11 @@ article {
 }
 .d-angle {
 	position: absolute;
+	bottom: 30rem;
 	left: 2rem;
-	bottom: 27rem;
 }
 .d-angle p {
 	font-size: 13px;
-}
-.header-img {
-	
 }
 
 .button-menu {
@@ -270,3 +267,6 @@ input, textarea {
 	border-radius: 35px 35px 35px 35px;
 	width: 12em;
 }
+
+
+
