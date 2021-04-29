@@ -33,7 +33,7 @@ article {
 }
 .d-angle {
 	position: absolute;
-	bottom: 30rem;
+	bottom: 32rem;
 	left: 2rem;
 }
 .d-angle p {
@@ -107,7 +107,14 @@ article {
 
 
 @media screen and (max-width: 768px) {
-	
+
+
+footer .footer-link a {
+	display: block;
+	width: 45%;
+	margin-left: 1rem;
+}
+
 
 .md-col-1 {
 	width: calc(((100% / 12) * 1) - 2%);
@@ -148,7 +155,7 @@ article {
 
 }
 
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 450px) {
 
 .gauche, .droite {
 	display: flex;
@@ -156,6 +163,12 @@ article {
 }	
 #nom, #telephone, #email, #message  {
 	width: 100%;
+}
+
+footer .footer-link a {
+	display: block;
+	width: 100%;
+	margin-left: 1rem;
 }
 
 .sm-col-1 {
@@ -197,9 +210,6 @@ article {
 
 }
 
-
-
-
 /*FORMULAIRE*/
 .formulaire {
 	width: 100%;
@@ -216,7 +226,7 @@ article {
 
 .form {
 	/*width: calc((900 / 1200) * 100%);*/
-	/*border: 1px solid rgba(179, 28, 28);*/
+	border: 1px solid red;
 	padding: 15px;
 	margin: 0 auto;	
 }
@@ -267,6 +277,35 @@ input, textarea {
 	border-radius: 35px 35px 35px 35px;
 	width: 12em;
 }
-
-
+/********/
+/*FOOTER*/
+/********/
+.footer {
+	background-color: #ff7fcf;
+}
+.footer-link {
+	max-width: 1200px;
+	display: flex;
+	flex-flow: row wrap;
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+	margin: 0 auto;
+}
+.footer-link a {
+	display: block;
+	width: 33%;
+	/*word-break: none;*/
+}
+.footer a {
+	color: #ededed;
+}
+.footer-link a::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 1rem;
+	height: 1.2rem;
+	background-color: #ededed;
+	margin-right: 0.5rem;
+}
 
