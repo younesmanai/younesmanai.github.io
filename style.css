@@ -50,7 +50,11 @@ body {
   text-align: center;
   overflow: auto;
   margin: 15px;
+
+  transition: height 0.5s;
 } 
+
+
 p {
   min-height: 100px;
   padding: 10px;
@@ -108,6 +112,19 @@ h1 {
   opacity: 0;
   cursor: pointer; 
 }
+.btnMd {
+  display: block;
+  padding: 5px 25px;
+  border-radius: 50px;
+  width: 100px;
+  margin: 10px auto;
+  background-color: transparent;
+  border: 1px solid #fff; 
+  color: #fff;
+  cursor: pointer;
+}
+
+
 .box::-webkit-scrollbar {
   width: 1px; /* width of the entire scrollbar */
 display: none;
@@ -123,6 +140,40 @@ display: none;
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid transparent; /* creates padding around scroll thumb */
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-flow: column wrap;
+  }
+  .box {
+    width: 80%;
+  }
+  .vignette {
+    opacity: 1;
+    font-size: 1.5rem;
+  }
+  .btn {
+    display: none;
+  }
+  .menu {
+    display: block;
+    width: 100%;
+    border-radius: 0rem;
+    background: transparent;
+  }
+  .menu li a {
+    padding: 5px;
+  }
+    .move1 {
+    height: 405px;
+  }
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 420px) {
   .container {
@@ -147,4 +198,8 @@ display: none;
   .menu li a {
     padding: 5px;
   }
+  .move {
+    height: 205px;
+}
+
 }

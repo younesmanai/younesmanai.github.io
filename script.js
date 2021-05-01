@@ -1,3 +1,4 @@
+let container = document.querySelector(".container");
 let title = document.querySelector("h1");
 let b1 = document.querySelector(".box1");
 let b2 = document.querySelector(".box2");
@@ -6,6 +7,7 @@ let b3 = document.querySelector(".box3");
 // BOUTONS //
 let btn = document.querySelector(".btn");
 let btnBack = document.querySelector(".btn1");
+let btnMd = document.querySelector(".btnMd");
 // MENU //
 let menu = document.querySelector(".menu");
 let menuItems = document.querySelector(".item");
@@ -49,6 +51,35 @@ btnBack.addEventListener("click", () => {
   gsap.to(btn, {opacity: 1, duration: 1, delay: 1.8});
   gsap.to(btnBack, {opacity: 0, duration: 1.8, delay: 0.2});
 })
+
+
+// MAX-WIDTH(768PX)
+b3.addEventListener("click", () => {
+  b3.classList.toggle("move");
+  b3.classList.toggle("move1");
+  // gsap.to(b3, {height: 500});
+  // gsap.to(b2, {height: 100});
+  // gsap.to(b1, {height: 100});
+});
+
+b2.addEventListener("click", () => {
+  b2.classList.toggle("move");
+  b2.classList.toggle("move1");
+  // gsap.to(b3, {height: 100});
+  // gsap.to(b2, {height: 500});
+  // gsap.to(b1, {height: 100});
+});
+
+b1.addEventListener("click", () => {
+  b1.classList.toggle("move");
+  b1.classList.toggle("move1");
+  // gsap.to(b3, {height: 100});
+  // gsap.to(b2, {height: 100});
+  // gsap.to(b1, {height: 500});
+});
+
+
+
 
 
 
